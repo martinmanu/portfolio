@@ -29,6 +29,14 @@ export class AppComponent {
     this.formattedText = text.split('');
   }
 
+  navigateToGitHub(link:string){
+    if(link == 'git'){
+      window.location.href = 'https://github.com/martinmanu';
+    }else if(link == 'link'){
+      window.location.href = 'https://www.linkedin.com/in/manu-martin-joseph/' 
+    }
+  }
+
   loadParticles(): void {
     particlesJS('particles-js', {
       particles: {
