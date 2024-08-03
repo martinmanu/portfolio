@@ -17,7 +17,7 @@ export class AppComponent {
     'integrating', 'front-end', 'expertise', 'with', 'backend', 'solutions', 'to',
     'drive', 'innovation', 'and', 'deliver', 'high-quality', 'results.'
   ];
-  constructor(){}
+  constructor(private elRef: ElementRef){}
 
   ngOnInit(){
     this.styleText()
@@ -27,6 +27,17 @@ export class AppComponent {
   styleText(): void {
     const text = 'Manu   Martin';
     this.formattedText = text.split('');
+  }
+
+  scrollToSection(sectionId: string) {
+    const section = this.elRef.nativeElement.querySelector(`#${sectionId}`);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  openPDF() {
+    window.open('assets/ManuMartinCVUPdated.pdf', '_blank');
   }
 
   navigateToGitHub(link:string){

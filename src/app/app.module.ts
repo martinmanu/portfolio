@@ -4,11 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatCardModule } from '@angular/material/card';
-import { MatCommonModule } from '@angular/material/core'; 
+import { MatCommonModule } from '@angular/material/core';
+import { SkillsComponent } from './skills/skills.component';
+import { ContactsComponent } from './contacts/contacts.component'; 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SkillsComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,7 @@
   position: absolute;
 }
 
-.decorator{
+.decorator {
   width: 75%;
   height: 95vh;
   pointer-events: none;
@@ -20,7 +20,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color:var(--text-color);
+  color: var(--text-color);
   font-family: "Zilla Slab", serif;
   padding: 20px;
   margin: 0 auto;
@@ -33,13 +33,21 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleUp {
-  from { transform: scale(0.1); }
-  to { transform: scale(1); }
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .intro {
@@ -71,8 +79,14 @@
 }
 
 @keyframes slideIn {
-  from { transform: translateY(-20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .description {
@@ -92,18 +106,6 @@
   opacity: 0;
   animation: shine 1s linear forwards;
   margin-right: 5px;
-
-}
-
-@keyframes shine {
-  from {
-      opacity: 0;
-      text-shadow: none;
-  }
-  to {
-      opacity: 1;
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
-  }
 }
 
 .description:hover {
@@ -134,8 +136,29 @@
 .right_name {
   color: white;
   width: 20%;
-  font-family: "Dancing Script", cursive;
+  font-family: "Zilla Slab", serif;
   padding: 0 15px;
+}
+
+.downloadBtn {
+  pointer-events: auto;
+  width: 116px;
+  height: 45px;
+  padding: 3px;
+  border: 3px solid var(--secondary-color);
+  border-radius: 25px;
+  background: var(--text-color);
+  font-size: 22px;
+  font-weight: bolder;
+  cursor: pointer ;
+  color: var(--primary-color);
+  animation: shines 3s linear forwards;
+}
+
+.downloadBtn:hover {
+  color:var(--text-color);
+  background: var(--primary-color);
+  border: 3px solid var(--text-color);
 }
 
 .animated-underline {
@@ -171,6 +194,30 @@
   justify-content: space-between;
   z-index: 9999;
   font-size: xx-large;
+}
+
+@keyframes shine {
+  from {
+    opacity: 0;
+    text-shadow: none;
+  }
+  to {
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes shines {
+  from {
+    opacity: 0;
+    text-shadow: none;
+  }
+  to {
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.5);
+  }
 }
 
 .triangle {

@@ -19,6 +19,12 @@
     padding: 0;
     height: 100%;
     overflow: hidden; 
+    scroll-behavior: smooth;
+  }
+
+  .section {
+    height: 100vh;
+    padding: 20px;
   }
   
   .full-height {
