@@ -1,0 +1,40 @@
+<div class="full-height" id="particles-js">
+    <section class="header_navigation d-flex justify-content-between col-sm-12">
+        <div class="right_name" #rightName>
+            <ng-container *ngFor="let char of formattedText">
+                <span [ngClass]="{'Mclass': char === 'M','others': char !== 'M'}">{{ char }}</span>
+            </ng-container>
+        </div>
+        <div class="optional_Names d-flex p-3 justify-content-evenly gap-5">
+            <span class="option animated-underline">About Me</span>
+            <span class="option animated-underline">Skills</span>
+            <span class="option animated-underline">Contact Me</span>
+            
+        </div>
+    </section>
+    <section class="decorator">
+        <span class="intro">
+            Hello, I'm
+            <span class="name">Manu Martin</span>
+        </span>
+        <div class="role">
+            <span>Software Developer</span>
+        </div>
+        <div class="description">
+            <span *ngFor="let word of words; let i = index" [ngStyle]="{ 'animation-delay': i * 0.1 + 's' }" class="word">
+                {{ word }}
+              </span>
+        </div>
+    </section>    
+    <section class="container">
+        <div class="icons">
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <div class="triangle">
+            <div class="circle">
+                <img src="\assets\SAVE_20221015_161028.jpg" alt="Profile Image" class="profile-image">
+            </div>
+        </div>
+    </section>
+</div>
