@@ -11,7 +11,7 @@ export class AppComponent {
   rightName: ElementRef<any>|any; 
   formattedText:string[] = [];
   words: string[] = [
-    'Front-End', 'Developer', 'with', '3+', 'years', 'of', 'experience', 'in', 'Web', 'Development.',
+    'FullStack', 'Developer', 'with', '3+', 'years', 'of', 'experience', 'in', 'Web', 'Development.',
     'Skilled', 'in', 'Angular', '(8/14/17),', 'Spring', 'Boot,', 'and', 'Selenium.',
     'Passionate', 'about', 'creating', 'seamless', 'user', 'experiences', 'and',
     'integrating', 'front-end', 'expertise', 'with', 'backend', 'solutions', 'to',
