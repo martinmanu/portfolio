@@ -1,3 +1,4 @@
+<router-outlet></router-outlet>
 <div class="full-height" id="particles-js">
     <section class="header_navigation d-flex justify-content-between col-sm-12">
         <div class="right_name" #rightName>
@@ -6,35 +7,13 @@
             </ng-container>
         </div>
         <div class="optional_Names d-flex p-3 justify-content-evenly gap-5">
-            <span class="option animated-underline" (click)="scrollToSection('about')">About Me</span>
-            <span class="option animated-underline" (click)="scrollToSection('skills')">Skills</span>
-            <span class="option animated-underline" (click)="scrollToSection('contact')">Contact Me</span>
+            <span class="option animated-underline" routerLink="/about" (click)="navigateTo('about')">About Me</span>
+            <span class="option animated-underline" routerLink="/skills" (click)="navigateTo('skills')">Skills</span>
+            <span class="option animated-underline" routerLink="/contact" (click)="navigateTo('contact')">Contact Me</span>
         </div>
     </section>
-    <section class="decorator">
-        <span class="intro">
-            Hello, I'm
-            <span class="name">Manu Martin</span>
-        </span>
-        <div class="role">
-            <span>Software Developer</span>
-        </div>
-        <div class="description">
-            <span *ngFor="let word of words; let i = index" [ngStyle]="{ 'animation-delay': i * 0.1 + 's' }" class="word">
-                {{ word }}
-              </span>
-        </div>
-        <button class="downloadBtn mat-elevation-z4" mat-stroke-button (click)="openPDF()"><span>Resume</span></button>
-    </section>    
-    <section class="container">
-        <div class="icons">
-            <i (click)="navigateToGitHub('git')" class="fa-brands fa-github"></i>
-            <i (click)="navigateToGitHub('link')"class="fa-brands fa-linkedin"></i>
-        </div>
-        <div class="triangle">
-            <div class="circle">
-                <img src="\assets\SAVE_20221015_161028.jpg" alt="Profile Image" class="profile-image">
-            </div>
-        </div>
-    </section>
+
+
+    <router-outlet></router-outlet>
+
 </div>

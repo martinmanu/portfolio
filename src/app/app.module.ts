@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatCommonModule } from '@angular/material/core';
 import { SkillsComponent } from './skills/skills.component';
-import { ContactsComponent } from './contacts/contacts.component'; 
+import { ContactsComponent } from './contacts/contacts.component';
+import { AboutComponent } from './about/about.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     SkillsComponent,
-    ContactsComponent
+    ContactsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

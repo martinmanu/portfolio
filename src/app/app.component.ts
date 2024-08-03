@@ -1,4 +1,5 @@
 import { Component, ElementRef} from '@angular/core';
+import { Router } from '@angular/router';
 declare var particlesJS: any;
 
 @Component({
@@ -7,33 +8,28 @@ declare var particlesJS: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'portfolio';
-  rightName: ElementRef<any>|any; 
   formattedText:string[] = [];
   words: string[] = [
-    'FullStack', 'Developer', 'with', '3+', 'years', 'of', 'experience', 'in', 'Web', 'Development.',
+    'Full-Stack', 'Developer', 'with', '3+', 'years', 'of', 'experience', 'in', 'Web', 'Development.',
     'Skilled', 'in', 'Angular', '(8/14/17),', 'Spring', 'Boot,', 'and', 'Selenium.',
     'Passionate', 'about', 'creating', 'seamless', 'user', 'experiences', 'and',
     'integrating', 'front-end', 'expertise', 'with', 'backend', 'solutions', 'to',
     'drive', 'innovation', 'and', 'deliver', 'high-quality', 'results.'
   ];
-  constructor(private elRef: ElementRef){}
+  constructor(private elRef: ElementRef, private router: Router){}
 
   ngOnInit(){
     this.styleText()
     this.loadParticles();
   }
 
+  navigateTo(route: string) {
+    // this.router.navigate([route]);
+  }
+
   styleText(): void {
     const text = 'Manu   Martin';
     this.formattedText = text.split('');
-  }
-
-  scrollToSection(sectionId: string) {
-    const section = this.elRef.nativeElement.querySelector(`#${sectionId}`);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
   }
 
   openPDF() {
