@@ -7,14 +7,16 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCommonModule } from '@angular/material/core';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { AboutComponent } from './about/about.component'; 
+import { AboutComponent } from './about/about.component';
+import { LeafletMapComponent } from './contacts/leaflet-map/leaflet-map.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     SkillsComponent,
     ContactsComponent,
-    AboutComponent
+    AboutComponent,
+    LeafletMapComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@
   align-items: center;
   position: absolute;
   width: 100%;
+  background: var(--header);
   gap: 10px;
   top: 65px;
 }
