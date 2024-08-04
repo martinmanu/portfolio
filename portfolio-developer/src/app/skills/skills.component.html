@@ -1,0 +1,11 @@
+<section class="skillSection">
+    <div class="myskill"><span>My Skills</span>
+        <div class="skills-grid">
+            <div *ngFor="let skill of skills | keyvalue" class="skill-item">
+                <img [src]="'assets/' + skill.value + '.png'" [alt]="skill.key" class="skill-icon">
+                <span class="skill-name">{{ skill.key }}</span>
+            </div>
+        </div>
+    </div>
+
+</section>

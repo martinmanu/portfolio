@@ -1,0 +1,26 @@
+<section class="decorator">
+    <span class="intro">
+        Hello, I'm
+        <span class="name">Manu Martin</span>
+    </span>
+    <div class="role">
+        <span>Software Developer</span>
+    </div>
+    <div class="description">
+        <span *ngFor="let word of words; let i = index" [ngStyle]="{ 'animation-delay': i * 0.1 + 's' }" class="word">
+            {{ word }}
+          </span>
+    </div>
+    <button class="downloadBtn mat-elevation-z4" mat-stroke-button (click)="openPDF()"><span>Resume</span></button>
+</section>    
+<section class="container">
+    <div class="icons">
+        <i (click)="navigateToGitHub('git')" class="fa-brands fa-github"></i>
+        <i (click)="navigateToGitHub('link')"class="fa-brands fa-linkedin"></i>
+    </div>
+    <div class="triangle">
+        <div class="circle">
+            <img src="assets/mnu.jpg" alt="Profile Image" class="profile-image">
+        </div>
+    </div>
+</section>
